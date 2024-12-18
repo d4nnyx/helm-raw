@@ -1,0 +1,14 @@
+manifests: []
+#  - apiVersion: v1
+#    kind: ConfigMap
+#    metadata:
+#      name: example-configmap
+#    data:
+#      key: value
+
+commonLabels: {}
+#  app: example
+
+commonAnnotations: {}
+#  annotation.io: example
+

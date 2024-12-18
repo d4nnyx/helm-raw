@@ -1,0 +1,9 @@
+apiVersion: v2
+name: helm-raw
+description: Helm chart wrapper for raw Kubernetes manifests
+type: application
+version: 0.1.0
+maintainers:
+  - name: Daniel Vašek
+    email: daniel@vasek.me
+    url: https://vasek.me
