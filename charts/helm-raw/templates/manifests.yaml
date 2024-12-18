@@ -1,0 +1,11 @@
+{{- if .Values.manifests }}
+{{- $commonLabels := .Values.commonLabels | default dict }}
+{{- $commonAnnotations := .Values.commonAnnotations | default dict }}
+{{- range .Values.manifests }}
+---
+{{- $manifestWithLabels := merge (dict "metadata" (dict "labels" $commonLabels)) . }}
+{{- $manifestWithAnnotations := merge (dict "metadata" (dict "annotations" $commonAnnotations)) $manifestWithLabels }}
+{{- $manifest := $manifestWithAnnotations }}
+{{- $manifest | toYaml }}
+{{- end }}
+{{- end }}
