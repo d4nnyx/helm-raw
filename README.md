@@ -1,17 +1,20 @@
-# Helm RAW
+## Usage
 
----
+[Helm](https://helm.sh) must be installed to use the charts.  Please refer to
+Helm's [documentation](https://helm.sh/docs) to get started.
 
-## Description
-Helm chart wrapper to deploy raw Kubernetes manifests.
+Once Helm has been set up correctly, add the repo as follows:
 
-![Version: 0.1.0](https://img.shields.io/badge/Version-0.1.0-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square)
+    helm repo add helm-raw https://d4nnyx.github.io/helm-raw
 
-## Features
+If you had already added this repo earlier, run `helm repo update` to retrieve
+the latest versions of the packages.  You can then run `helm search repo
+helm-raw` to see the charts.
 
-- wrapping Kubernetes manifests with a Helm chart
-- adding common labels and annotations to each resource
+To install the helm-raw chart:
 
-## Installation
+    helm install my-release-name helm-raw/helm-raw
 
-See [charts/helm-raw/README.md](charts/helm-raw/README.md) for more information.
+To uninstall the chart:
+
+    helm delete my-release-name
