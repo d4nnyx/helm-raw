@@ -3,4 +3,4 @@ plugins:
   - jekyll-remote-theme
 
 title: [Helm RAW chart]
-description: [Wrap your Kubernetes manifest with Helm]
+description: [Wrap your Kubernetes manifests with Helm]
