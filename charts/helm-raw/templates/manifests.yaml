@@ -3,9 +3,17 @@
 {{- $commonAnnotations := .Values.commonAnnotations | default dict }}
 {{- range .Values.manifests }}
 ---
-{{- $manifestWithLabels := merge (dict "metadata" (dict "labels" $commonLabels)) . }}
-{{- $manifestWithAnnotations := merge (dict "metadata" (dict "annotations" $commonAnnotations)) $manifestWithLabels }}
-{{- $manifest := $manifestWithAnnotations }}
+
+{{- $manifest := . }}
+
+{{- if and $commonLabels $commonAnnotations }}
+  {{- $tmp := merge (dict "metadata" (dict "annotations" $commonAnnotations)) . }}
+  {{- $manifest = merge (dict "metadata" (dict "labels" $commonLabels)) $tmp }}
+{{- else if $commonLabels }}
+  {{- $manifest = merge (dict "metadata" (dict "labels" $commonLabels)) . }}
+{{- else if $commonAnnotations }}
+  {{- $manifest = merge (dict "metadata" (dict "annotations" $commonAnnotations)) . }}
+{{- end }}
 {{- $manifest | toYaml }}
 {{- end }}
 {{- end }}
