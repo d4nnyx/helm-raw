@@ -2,6 +2,19 @@ apiVersion: v1
 entries:
   helm-raw:
   - apiVersion: v2
+    created: "2025-11-25T18:43:48.581969632Z"
+    description: Helm chart wrapper for raw Kubernetes manifests
+    digest: 62d6964016453d97ef23f443b06915b1166c0280779ff025305374bcdcd9234d
+    maintainers:
+    - email: daniel@vasek.me
+      name: Daniel Vašek
+      url: https://vasek.me
+    name: helm-raw
+    type: application
+    urls:
+    - https://github.com/d4nnyx/helm-raw/releases/download/helm-raw-0.2.0/helm-raw-0.2.0.tgz
+    version: 0.2.0
+  - apiVersion: v2
     created: "2024-12-18T12:11:47.649260898Z"
     description: Helm chart wrapper for raw Kubernetes manifests
     digest: 47a561500939b10da89ff17553a8b75084550a883428f0fc836b44fe28879023
@@ -14,4 +27,4 @@ entries:
     urls:
     - https://github.com/d4nnyx/helm-raw/releases/download/helm-raw-0.1.0/helm-raw-0.1.0.tgz
     version: 0.1.0
-generated: "2024-12-18T12:11:47.649272219Z"
+generated: "2025-11-25T18:43:48.581976675Z"
